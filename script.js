@@ -15,7 +15,7 @@ async function getServerTime() {
 
 async function startCountdown() {
     const serverTime = await getServerTime();
-    const targetDate = new Date("Sep 13, 2024 12:12:00").getTime(); // Modifica la fecha aquí
+    const targetDate = new Date("Sep 13, 2024 12:20:00").getTime(); // Modifica la fecha aquí
 
     const countdown = setInterval(() => {
         const now = new Date().getTime();
@@ -69,7 +69,7 @@ async function startCountdown() {
             document.body.innerHTML += `
                 <div id="gallery-container">
                     <div id="gallery">
-                        ${Array.from({ length: 20 }, (_, i) => `
+                        ${Array.from({ length: 26 }, (_, i) => `
                             <img src="Fotos/Foto${i + 1}.jpeg" alt="Foto ${i + 1}">
                         `).join('')}
                     </div>
