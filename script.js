@@ -1,5 +1,5 @@
 // Fecha objetivo (puedes cambiar esta fecha por la que desees)
-const targetDate = new Date("Sep 13, 2024 10:24:00").getTime();
+const targetDate = new Date("Sep 13, 2024 10:37:00").getTime();
 
 // Referencia al temporizador
 const countdown = setInterval(() => {
@@ -21,7 +21,7 @@ const countdown = setInterval(() => {
     // Mientras la cuenta regresiva está activa
     if (distance >= 0) {
         // Establecer un GIF como fondo
-        document.body.style.backgroundImage = "url('countdown-background.gif')";
+        document.body.style.backgroundImage = "url('GifHomerFondo.gif')";
         document.body.style.backgroundSize = "cover";  // Asegura que la imagen cubra toda la página
         document.body.style.backgroundAttachment = "fixed"; // Mantiene el fondo fijo
     } else {
@@ -39,7 +39,7 @@ const countdown = setInterval(() => {
             <div id="gallery-container">
                 <div id="gallery">
                     ${Array.from({ length: 20 }, (_, i) => `
-                        <img src="/Fotos/Foto${i + 1}.jpg" alt="Foto ${i + 1}">
+                        <img src="Fotos/Foto${i + 1}.jpg" alt="Foto ${i + 1}">
                     `).join('')}
                 </div>
             </div>
