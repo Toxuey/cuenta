@@ -15,7 +15,7 @@ async function getServerTime() {
 
 async function startCountdown() {
     const serverTime = await getServerTime();
-    const targetDate = new Date("Sep 13, 2024 14:35:00").getTime(); 
+    const targetDate = new Date("Sep 13, 2024 14:44:00").getTime(); 
 
     const countdown = setInterval(() => {
         const now = new Date().getTime();
