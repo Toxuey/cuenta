@@ -6,51 +6,34 @@ body {
     padding: 0;
 }
 
-#main-title {
-    font-size: 36px;
-    color: #ff5722;
-    margin-top: 20px;
-}
-
-#end-title {
-    font-size: 40px;
-    color: #4CAF50;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
 #countdown {
     margin-top: 50px;
 }
 
 #timer {
-    font-size: 64px; 
-    font-weight: bold; 
-    color: #333; 
-    background-color: #ffeb3b; 
+    font-size: 64px; /* Tamaño de letra más grande */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    background-color: #ffeb3b; /* Fondo resaltado */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    display: inline-block; 
-    margin-bottom: 40px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra de caja para resaltar */
+    display: inline-block; /* Para que el contenedor de fondo se ajuste al tamaño del texto */
+    margin-bottom: 40px; /* Separación inferior */
 }
 
 #gif-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Cambiado a flexbox */
+    flex-direction: column; /* Una columna */
+    align-items: center; /* Centrar los GIFs horizontalmente */
+    gap: 20px; /* Espacio entre los GIFs */
+    justify-content: center; /* Centrar verticalmente */
 }
 
 #gif-container img {
-    width: 100%;
-    max-width: 300px; 
-    height: auto; 
+    width: 100%; /* Ajustar al ancho del contenedor */
+    max-width: 300px; /* Ancho máximo para los GIFs */
+    height: auto; /* Mantener la proporción */
 }
 
 .hidden {
@@ -60,42 +43,36 @@ body {
 /* Estilo para la galería al final */
 #gallery-container {
     display: flex;
-    flex-direction: column;
-    align-items: center; 
+    flex-direction: column; /* Alinea las fotos verticalmente */
+    align-items: center; /* Centra las fotos */
     gap: 10px;
     margin-top: 30px;
-    padding: 0 10px; /* Añadir padding para el espaciado en pantallas pequeñas */
-}
-
-#gallery {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas */
-    justify-content: center; /* Centra las imágenes horizontalmente */
 }
 
 #gallery img {
     width: 100%;
-    max-width: 150px; /* Reducir el ancho máximo para pantallas pequeñas */
+    max-width: 400px;
     height: auto;
-    object-fit: cover; /* Asegura que las imágenes cubran su contenedor sin distorsión */
+    object-fit: cover;
 }
 
 /* Media queries para ajustar el diseño en pantallas pequeñas */
 @media (max-width: 768px) {
     #timer {
-        font-size: 32px;
+        font-size: 32px; /* Reducir tamaño del texto del contador en pantallas pequeñas */
+    }
+
+    #gif-container {
+        flex-direction: column; /* Una columna en pantallas más pequeñas */
+        gap: 10px; /* Espacio reducido entre los GIFs */
     }
 
     #gif-container img {
-        max-width: 200px;
+        max-width: 200px; /* Reducir el tamaño de los GIFs en pantallas pequeñas */
     }
 
     #countdown {
         margin-top: 20px;
-    }
-
-    #gallery img {
-        max-width: 200px; /* Ajustar el tamaño máximo en pantallas medianas */
     }
 }
 
@@ -105,10 +82,6 @@ body {
     }
 
     #gif-container img {
-        max-width: 150px;
-    }
-
-    #gallery img {
-        max-width: 100px; /* Hacer las imágenes aún más pequeñas en pantallas muy pequeñas */
+        max-width: 150px; /* Hacer los GIFs más pequeños en pantallas muy pequeñas */
     }
 }
