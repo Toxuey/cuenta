@@ -47,7 +47,7 @@ body {
 
 #gif-container img {
     width: 100%; /* Ajustar al ancho del contenedor */
-    max-width: 400px; /* Ancho máximo para los GIFs (aumento del tamaño) */
+    max-width: 300px; /* Ancho máximo para los GIFs (aumento del tamaño) */
     height: auto; /* Mantener la proporción */
 }
 
@@ -82,7 +82,7 @@ body {
     }
 
     #gif-container img {
-        max-width: 400px; /* Ajustar el tamaño de los GIFs en pantallas pequeñas */
+        max-width: 300px; /* Ajustar el tamaño de los GIFs en pantallas pequeñas */
     }
 
     #countdown {
@@ -96,6 +96,6 @@ body {
     }
 
     #gif-container img {
-        max-width: 350px; /* Ajustar el tamaño de los GIFs en pantallas muy pequeñas */
+        max-width: 200px; /* Ajustar el tamaño de los GIFs en pantallas muy pequeñas */
     }
 }
