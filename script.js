@@ -62,6 +62,8 @@ async function startCountdown() {
             document.getElementById("gif1").classList.add("hidden");
             document.getElementById("gif2").classList.add("hidden");
             document.getElementById("gif3").classList.add("hidden");
+            document.getElementById("gif4").classList.add("hidden");
+            document.getElementById("gif5").classList.add("hidden");
 
             // Mostrar la galería de fotos
             document.body.innerHTML += `
