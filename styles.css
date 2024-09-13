@@ -19,28 +19,57 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Para que los GIFs se ajusten en pantallas pequeñas */
 }
 
 #gif-container img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
 
 .hidden {
     display: none;
 }
 
+/* Estilo para la galería al final */
 #gallery-container {
     display: flex;
-    flex-direction: column; /* Cambiado a columna */
+    flex-direction: column; /* Alinea las fotos verticalmente */
     align-items: center; /* Centra las fotos */
     gap: 10px;
     margin-top: 30px;
 }
 
 #gallery img {
-    width: 100%; /* Se ajusta al ancho de la pantalla */
-    max-width: 400px; /* Ancho máximo para limitar el tamaño en pantallas grandes */
-    height: auto; /* Mantiene la relación de aspecto */
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     object-fit: cover;
+}
+
+/* Media queries para ajustar el diseño en pantallas pequeñas */
+@media (max-width: 768px) {
+    #timer {
+        font-size: 18px; /* Reducir tamaño del texto del contador en pantallas pequeñas */
+    }
+
+    #gif-container img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #countdown {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #timer {
+        font-size: 16px;
+    }
+
+    #gif-container img {
+        width: 60px;
+        height: 60px; /* Hacer los GIFs más pequeños en pantallas muy pequeñas */
+    }
 }
