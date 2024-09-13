@@ -7,10 +7,18 @@ body {
 }
 
 #main-title {
-    color: #ff5722; /* Cambia este valor por el color que prefieras */
-    font-size: 36px; /* Ajusta el tamaño de la fuente si es necesario */
-    font-weight: bold; /* Hace el texto en negrita */
-    margin-top: 20px; /* Ajusta el margen superior si es necesario */
+    color: #ff5722; /* Color del texto */
+    font-size: 36px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    margin-top: 20px; /* Margen superior */
+    background-color: rgba(0, 0, 255, 0.3); /* Fondo azul con 30% de opacidad */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+}
+
+#end-title {
+    font-size: 40px;
+    color: #4CAF50;
 }
 
 #countdown {
