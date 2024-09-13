@@ -1,7 +1,7 @@
 // Función para obtener la hora del servidor desde WorldTimeAPI
 async function getServerTime() {
     // Cambia http a https
-    const response = await fetch('https://worldtimeapi.org/api/timezone/America/Bogota');
+    const response = await fetch('https://worldtimeapi.org/timezone/America/Bogota');
     const data = await response.json();
     return new Date(data.datetime).getTime(); // La API devuelve la hora en formato ISO
 }
