@@ -1,5 +1,6 @@
 // Función para obtener la hora del servidor desde WorldTimeAPI
 async function getServerTime() {
+    // Cambia http a https
     const response = await fetch('https://worldtimeapi.org/api/timezone/America/Bogota');
     const data = await response.json();
     return new Date(data.datetime).getTime(); // La API devuelve la hora en formato ISO
@@ -7,7 +8,7 @@ async function getServerTime() {
 
 async function startCountdown() {
     const serverTime = await getServerTime();
-    const targetDate = new Date("Sep 13, 2024 10:55:00").getTime();
+    const targetDate = new Date("Sep 13, 2024 00:00:00").getTime();
 
     const countdown = setInterval(() => {
         const now = new Date().getTime();
@@ -28,7 +29,7 @@ async function startCountdown() {
         // Mientras la cuenta regresiva está activa
         if (distance >= 0) {
             // Establecer un GIF como fondo
-            document.body.style.backgroundImage = "url('gifs/countdown-background.gif')";
+            document.body.style.backgroundImage = "url('GifHomerFondo.gif')";
             document.body.style.backgroundSize = "cover";  // Asegura que la imagen cubra toda la página
             document.body.style.backgroundAttachment = "fixed"; // Mantiene el fondo fijo
         } else {
@@ -47,7 +48,7 @@ async function startCountdown() {
                 <div id="gallery-container">
                     <div id="gallery">
                         ${Array.from({ length: 20 }, (_, i) => `
-                            <img src="Fotos/Foto${i + 1}.jpeg" alt="Foto ${i + 1}">
+                            <img src="Fotos/Foto${i + 1}.jpg" alt="Foto ${i + 1}">
                         `).join('')}
                     </div>
                 </div>
