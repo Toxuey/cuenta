@@ -44,9 +44,9 @@ async function startCountdown() {
             document.getElementById("gif1").classList.remove("hidden");
             document.getElementById("gif2").classList.remove("hidden");
             document.getElementById("gif3").classList.remove("hidden");
-            document.getElementById("gif1").classList.remove("hidden");
-            document.getElementById("gif2").classList.remove("hidden");
-            document.getElementById("gif3").classList.remove("hidden");
+            document.getElementById("gif4").classList.remove("hidden");
+            document.getElementById("gif5").classList.remove("hidden");
+            
         } else {
             clearInterval(countdown);
 
