@@ -7,7 +7,7 @@ async function getServerTime() {
 
 async function startCountdown() {
     const serverTime = await getServerTime();
-    const targetDate = new Date("Sep 13, 2024 10:41:00").getTime();
+    const targetDate = new Date("Sep 13, 2024 10:50:00").getTime();
 
     const countdown = setInterval(() => {
         const now = new Date().getTime();
@@ -47,7 +47,7 @@ async function startCountdown() {
                 <div id="gallery-container">
                     <div id="gallery">
                         ${Array.from({ length: 20 }, (_, i) => `
-                            <img src="fotos/photo${i + 1}.jpeg" alt="Foto ${i + 1}">
+                            <img src="Fotos/Foto${i + 1}.jpeg" alt="Foto ${i + 1}">
                         `).join('')}
                     </div>
                 </div>
