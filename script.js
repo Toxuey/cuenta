@@ -47,7 +47,7 @@ async function startCountdown() {
                 <div id="gallery-container">
                     <div id="gallery">
                         ${Array.from({ length: 20 }, (_, i) => `
-                            <img src="fotos/photo${i + 1}.jpg" alt="Foto ${i + 1}">
+                            <img src="fotos/photo${i + 1}.jpeg" alt="Foto ${i + 1}">
                         `).join('')}
                     </div>
                 </div>
