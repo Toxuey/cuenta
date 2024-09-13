@@ -96,6 +96,6 @@ body {
     }
 
     #gif-container img {
-        max-width: 200px; /* Ajustar el tamaño de los GIFs en pantallas muy pequeñas */
+        max-width: 300px; /* Ajustar el tamaño de los GIFs en pantallas muy pequeñas */
     }
 }
