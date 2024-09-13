@@ -11,20 +11,28 @@ body {
 }
 
 #timer {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 64px; /* Tamaño de letra más grande */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    background-color: #ffeb3b; /* Fondo resaltado */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra de caja para resaltar */
+    display: inline-block; /* Para que el contenedor de fondo se ajuste al tamaño del texto */
+    margin-bottom: 40px; /* Separación inferior */
 }
 
 #gif-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Para que los GIFs se ajusten en pantallas pequeñas */
+    display: grid; /* Cambiado a grid */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre los GIFs */
+    justify-content: center; /* Centrar las columnas */
 }
 
 #gif-container img {
-    width: 100px;
-    height: 100px;
+    width: 100%; /* Ajustar al ancho de la columna */
+    max-width: 300px; /* Ancho máximo para los GIFs */
+    height: auto; /* Mantener la proporción */
 }
 
 .hidden {
@@ -50,12 +58,15 @@ body {
 /* Media queries para ajustar el diseño en pantallas pequeñas */
 @media (max-width: 768px) {
     #timer {
-        font-size: 18px; /* Reducir tamaño del texto del contador en pantallas pequeñas */
+        font-size: 32px; /* Reducir tamaño del texto del contador en pantallas pequeñas */
+    }
+
+    #gif-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
     }
 
     #gif-container img {
-        width: 80px;
-        height: 80px;
+        max-width: 200px; /* Reducir el tamaño de los GIFs en pantallas pequeñas */
     }
 
     #countdown {
@@ -65,11 +76,11 @@ body {
 
 @media (max-width: 480px) {
     #timer {
-        font-size: 16px;
+        font-size: 28px;
     }
 
     #gif-container img {
-        width: 60px;
-        height: 60px; /* Hacer los GIFs más pequeños en pantallas muy pequeñas */
+        max-width: 150px; /* Hacer los GIFs más pequeños en pantallas muy pequeñas */
     }
 }
+
