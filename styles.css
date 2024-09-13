@@ -8,12 +8,12 @@ body {
 
 #main-title {
     color: #000000; /* Color del texto */
-    font-size: 26px; /* Tamaño del texto */
+    font-size: 20px; /* Tamaño del texto */
     font-weight: bold; /* Negrita */
     margin-top: 20px; /* Margen superior */
     background-color: #ffe169; /* Fondo azul con 30% de opacidad */
     padding: 10px; /* Espacio alrededor del texto */
-    border-radius: 5px; /* Bordes redondeados opcionales */
+    border-radius: 10px; /* Bordes redondeados opcionales */
 }
 
 #end-title {
@@ -47,7 +47,7 @@ body {
 
 #gif-container img {
     width: 100%; /* Ajustar al ancho del contenedor */
-    max-width: 300px; /* Ancho máximo para los GIFs (aumento del tamaño) */
+    max-width: 350px; /* Ancho máximo para los GIFs (aumento del tamaño) */
     height: auto; /* Mantener la proporción */
 }
 
@@ -82,7 +82,7 @@ body {
     }
 
     #gif-container img {
-        max-width: 300px; /* Ajustar el tamaño de los GIFs en pantallas pequeñas */
+        max-width: 350px; /* Ajustar el tamaño de los GIFs en pantallas pequeñas */
     }
 
     #countdown {
