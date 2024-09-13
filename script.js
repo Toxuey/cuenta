@@ -1,6 +1,7 @@
-// Fecha objetivo (año nuevo)
-const targetDate = new Date("Sep 13, 2024 08:45:00").getTime();
+// Fecha objetivo (puedes cambiar esta fecha por la que desees)
+const targetDate = new Date("Sep 13, 2024 09:00:00").getTime();
 
+// Referencia al temporizador
 const countdown = setInterval(() => {
     const now = new Date().getTime();
     const distance = targetDate - now;
@@ -17,9 +18,34 @@ const countdown = setInterval(() => {
     document.getElementById("minutes").innerText = minutes;
     document.getElementById("seconds").innerText = seconds;
 
-    // Si el contador llega a cero
+    // Cuando el contador llega a cero
     if (distance < 0) {
         clearInterval(countdown);
-        document.getElementById("countdown").innerHTML = "¡Feliz Año Nuevo!";
+
+        // Ocultar la cuenta regresiva
+        document.getElementById("countdown").style.display = "none";
+
+        // Mostrar GIF y texto animado
+        document.body.innerHTML += `
+            <div style="text-align: center;">
+                <h1 id="animatedText">¡La cuenta regresiva ha terminado!</h1>
+                <img src="https://j.gifs.com/vZ47rV.gif" alt="Celebración GIF">
+            </div>
+        `;
+
+        // Animar el texto
+        const animatedText = document.getElementById("animatedText");
+        animatedText.style.animation = "pulse 1s infinite";
+
+        // Definir la animación en CSS usando JavaScript
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
     }
 }, 1000);
