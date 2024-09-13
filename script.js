@@ -1,5 +1,5 @@
 // Fecha objetivo (año nuevo)
-const targetDate = new Date("Sep 13, 2024 08:30:00").getTime();
+const targetDate = new Date("Sep 13, 2024 08:45:00").getTime();
 
 const countdown = setInterval(() => {
     const now = new Date().getTime();
