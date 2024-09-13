@@ -1,13 +1,13 @@
 // Función para obtener la hora del servidor desde WorldTimeAPI
 async function getServerTime() {
-    const response = await fetch('http://worldtimeapi.org/api/timezone/America/Bogota');
+    const response = await fetch('https://worldtimeapi.org/api/timezone/America/Bogota');
     const data = await response.json();
     return new Date(data.datetime).getTime(); // La API devuelve la hora en formato ISO
 }
 
 async function startCountdown() {
     const serverTime = await getServerTime();
-    const targetDate = new Date("Sep 13, 2024 10:50:00").getTime();
+    const targetDate = new Date("Sep 13, 2024 10:55:00").getTime();
 
     const countdown = setInterval(() => {
         const now = new Date().getTime();
