@@ -7,11 +7,11 @@ body {
 }
 
 #main-title {
-    color: #ff5722; /* Color del texto */
+    color: #000000; /* Color del texto */
     font-size: 36px; /* Tamaño del texto */
     font-weight: bold; /* Negrita */
     margin-top: 20px; /* Margen superior */
-    background-color: rgba(0, 0, 255, 1); /* Fondo azul con 30% de opacidad */
+    background-color: #ffe169; /* Fondo azul con 30% de opacidad */
     padding: 10px; /* Espacio alrededor del texto */
     border-radius: 5px; /* Bordes redondeados opcionales */
 }
