@@ -9,14 +9,13 @@ async function getServerTime() {
         return new Date(data.datetime).getTime(); // La API devuelve la hora en formato ISO
     } catch (error) {
         console.error('Error fetching the server time:', error);
-        // Puedes establecer una fecha predeterminada o mostrar un mensaje de error aquí
         return new Date().getTime(); // Usar la hora actual si hay un error
     }
 }
 
 async function startCountdown() {
     const serverTime = await getServerTime();
-    const targetDate = new Date("Sep 13, 2024 11:30:00").getTime();
+    const targetDate = new Date("Sep 13, 2024 11:52:00").getTime(); // Modifica la fecha aquí
 
     const countdown = setInterval(() => {
         const now = new Date().getTime();
@@ -40,6 +39,14 @@ async function startCountdown() {
             document.body.style.backgroundImage = "url('GifHomerFondo.gif')";
             document.body.style.backgroundSize = "cover";  // Asegura que la imagen cubra toda la página
             document.body.style.backgroundAttachment = "fixed"; // Mantiene el fondo fijo
+
+            // Mostrar los GIFs
+            document.getElementById("gif1").classList.remove("hidden");
+            document.getElementById("gif2").classList.remove("hidden");
+            document.getElementById("gif3").classList.remove("hidden");
+            document.getElementById("gif1").classList.remove("hidden");
+            document.getElementById("gif2").classList.remove("hidden");
+            document.getElementById("gif3").classList.remove("hidden");
         } else {
             clearInterval(countdown);
 
@@ -51,12 +58,17 @@ async function startCountdown() {
             document.body.style.backgroundSize = "";  // Restablece el tamaño del fondo a su valor por defecto
             document.body.style.backgroundAttachment = ""; // Restablece el ajuste del fondo a su valor por defecto
 
+            // Ocultar los GIFs
+            document.getElementById("gif1").classList.add("hidden");
+            document.getElementById("gif2").classList.add("hidden");
+            document.getElementById("gif3").classList.add("hidden");
+
             // Mostrar la galería de fotos
             document.body.innerHTML += `
                 <div id="gallery-container">
                     <div id="gallery">
                         ${Array.from({ length: 20 }, (_, i) => `
-                            <img src="Fotos/Foto${i + 1}.jpeg" alt="Foto ${i + 1}">
+                            <img src="Fotos/Foto${i + 1}.jpg" alt="Foto ${i + 1}">
                         `).join('')}
                     </div>
                 </div>
