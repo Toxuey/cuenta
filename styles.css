@@ -6,6 +6,13 @@ body {
     padding: 0;
 }
 
+#main-title {
+    color: #ff5722; /* Cambia este valor por el color que prefieras */
+    font-size: 36px; /* Ajusta el tamaño de la fuente si es necesario */
+    font-weight: bold; /* Hace el texto en negrita */
+    margin-top: 20px; /* Ajusta el margen superior si es necesario */
+}
+
 #countdown {
     margin-top: 50px;
 }
